@@ -1,0 +1,6 @@
+faker
+pandas
+scikit-learn
+matplotlib
+medspacy
+scispacy
