@@ -1,37 +1,37 @@
 # Onqi Research
 
-This repository contains research prototypes and experiments for building AI-powered clinical decision support tools for lung cancer screening and beyond.  
+This repository contains research prototypes and experiments for building AI-powered clinical decision support tools for healthcare.  
 Each publication is organized into its own folder under `publications/`.
 
 
+**Publication 1: Closing the Lung Cancer Screening Gap in FQHCs**  
+- Synthetic dataset generation  
+- NLP extraction for smoking history  
+- Eligibility rules engine (USPSTF)  
+- Evaluation (precision, recall, F1)  
+- Results (tables, charts, workflow diagram)
 
-## Publication 1: Closing the Lung Cancer Screening Gap in FQHCs
 
-This MVP supports the first research paper:
+## Upcoming Publications
 
-1. **Synthetic Dataset Generation** – Create ~100–200 mock patient records (structured + unstructured).
-2. **NLP Extraction Engine** – Extract smoking history and quit date from clinical notes.
-3. **Eligibility Rules Engine** – Apply USPSTF lung cancer screening guidelines.
-4. **Evaluation** – Measure NLP accuracy (precision, recall, F1).
-5. **Results & Outputs** – Generate tables, charts, and workflow diagram for publication.
+1. NLP for Clinical Note Triage in Resource-Limited Clinics  
+2. Referral Automation Workflows in Value-Based Care  
+3. Policy Perspectives on Screening Gaps  
+4. Lightweight Modular Architecture for Clinical Decision Support
 
----
 
 ## 🛠️ Setup
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/arvildey/onqi-research.git
 cd onqi-research
 pip install -r requirements.txt
 ```
 
-### Running the Dataset Generator
+### Run Paper 1 MVP
 ```bash
+# 1. Generate synthetic dataset
 python publications/lung_cancer_fqhc/scripts generate_dataset.py
-```
-### This will output:
-```bash
-publications/lung_cancer_fqhc/data/raw/synthetic_patients.csv
 ```
 
 
