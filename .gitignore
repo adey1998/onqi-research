@@ -5,6 +5,7 @@ __pycache__/
 *.pyd
 .venv/
 .env
+venv/
 
 # Data
 publications/*/data/raw/
