@@ -5,17 +5,15 @@ import random
 fake = Faker()
 
 def generate_patient_record():
-    """
-        Generates one synthetic patient record for FQHC clinics. 
-        Returns a dict representing the patient.
-    """
+    """Generates one synthetic patient record for FQHC clinics. 
+       Returns a dict representing the patient."""
     
     age = random.randint(40, 85)
     pack_years = random.randint(0,60)
     quit_years = random.choice([None, random.randint(0,20)]) # None means current smoker
     
-    # Comorbidites simulation
-    comorbidites = random.sample(
+    # Comorbidities simulation
+    comorbidities = random.sample(
         ["COPD", "Diabetes", "Hypertension", "None"],
         k=1
     )[0]
@@ -26,14 +24,14 @@ def generate_patient_record():
     else:
         smoking_note = f"Patient has a {pack_years} pack-year smoking history and quit {quit_years} years ago."
         
-    note = f"{smoking_note} Past medical history includes {comorbidites}."
+    note = f"{smoking_note} Past medical history includes {comorbidities}."
     
     return {
         "name": fake.name(),
         "age": age,
         "pack_years": pack_years,
         "quit_years": quit_years,
-        "comorbidites": comorbidites,
+        "comorbidities": comorbidities,
         "note": note
     }
     
