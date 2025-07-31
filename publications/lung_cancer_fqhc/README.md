@@ -1,4 +1,4 @@
-## Closing the Lung Cancer Screening Gap in Federally Qualified Health Centers (FQHCs) Using AI-Powered Clinical Decision Support
+# Closing the Lung Cancer Screening Gap in Federally Qualified Health Centers (FQHCs) Using AI-Powered Clinical Decision Support
 
 This project is the MVP build for Publication 1 in the Onqi Research series.
 It demonstrates how synthetic data, NLP, and rules-based eligibility logic can help identify patients who qualify for lung cancer screening in resource-limited clinics.
