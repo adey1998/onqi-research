@@ -1,2 +1,17 @@
-# Ignore virtual environment
-venv/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+
+# Data
+publications/*/data/raw/
+publications/*/data/processed/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
