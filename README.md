@@ -2,7 +2,6 @@
 
 This repository contains the research and technical builds powering Onqi's mission to close the cancer screening gap using AI-driven clinical decision support.
 
-## Publications
 
 ## Publications
 
