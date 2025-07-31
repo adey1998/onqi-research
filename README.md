@@ -4,7 +4,7 @@ This repository contains research prototypes and experiments for building AI-pow
 Each publication is organized into its own folder under `publications/`.
 
 
-**Publication 1: Closing the Lung Cancer Screening Gap in FQHCs**  
+## Publication 1: Closing the Lung Cancer Screening Gap in FQHCs  
 - Synthetic dataset generation  
 - NLP extraction for smoking history  
 - Eligibility rules engine (USPSTF)  
@@ -13,14 +13,13 @@ Each publication is organized into its own folder under `publications/`.
 
 
 ## Upcoming Publications
-
 1. NLP for Clinical Note Triage in Resource-Limited Clinics  
 2. Referral Automation Workflows in Value-Based Care  
 3. Policy Perspectives on Screening Gaps  
 4. Lightweight Modular Architecture for Clinical Decision Support
 
 
-## 🛠️ Setup
+## Setup
 
 ```bash
 git clone https://github.com/arvildey/onqi-research.git
