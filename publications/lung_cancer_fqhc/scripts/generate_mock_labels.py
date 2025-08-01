@@ -1,7 +1,7 @@
 import pandas as pd
 
 def generate_mock_labels():
-    """Generate a mock 'labeled_notes.csv' file for evaluating the NLP pipeline."""
+    """Generate a mock 'labeled_notes.csv' file for evaluating against the NLP pipeline."""
     
     # Load synthetic patients
     df = pd.read_csv("publications/lung_cancer_fqhc/data/raw/synthetic_patients.csv")
