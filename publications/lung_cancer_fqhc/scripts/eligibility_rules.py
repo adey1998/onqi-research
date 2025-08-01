@@ -5,7 +5,7 @@ import os
 NLP_DATA_PATH = "publications/lung_cancer_fqhc/data/processed/nlp_extracted.csv"
 OUTPUT_PATH = "publications/lung_cancer_fqhc/data/processed/eligibility_flags.csv"
 
-def is_eligible(age, pack_years, quit_years, status):
+def is_eligible(age, pack_years, quit_years, smoking_status):
     """Return True if patient meets USPSTF screening criteria."""
     
     if age < 50:
@@ -14,9 +14,9 @@ def is_eligible(age, pack_years, quit_years, status):
         return False, "Ineligible: Age above 80"
     if pack_years < 20:
         return False, "Ineligible: <20 pack-years"
-    if status == "current smoker":
+    if smoking_status == "current smoker":
         return True, "Eligible: Current smoker"
-    if status == "former smoker":
+    if smoking_status == "former smoker":
         if quit_years is not None and quit_years < 15:
             return True, "Eligible: Quit within 15 years"
         else:
@@ -28,15 +28,19 @@ def main():
     df = pd.read_csv(NLP_DATA_PATH)
     
     print("Applying eligibility rules...")
-    df["eligible"] = df.apply(
+    results = df.apply(
         lambda row: is_eligible(
             row["age"],
             row["pack_years"],
             row["quit_years"],
-            row["status"]
+            row["smoking_status"]
         ),
         axis=1
     )
+    
+    # Split tuple into 2 columns
+    df["eligible"] = results.apply(lambda x: x[0])
+    df["eligibility_reason"] = results.apply(lambda x: x[1])
     
     # Save flagged patients
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)

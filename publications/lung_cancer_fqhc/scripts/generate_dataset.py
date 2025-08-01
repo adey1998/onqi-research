@@ -38,8 +38,8 @@ def generate_patient_record():
 def generate_dataset(n=100):
     data = [generate_patient_record() for _ in range(n)]
     df = pd.DataFrame(data)
-    df.to_csv("../data/raw/synthetic_patients.csv", index=False)
-    print(f"Generated {n} patient records -> ../data/raw/synthetic_patients.csv")
+    df.to_csv("publications/lung_cancer_fqhc/data/raw/synthetic_patients.csv", index=False)
+    print(f"Generated {n} patient records -> publications/lung_cancer_fqhc/data/raw/synthetic_patients.csv")
     
 if __name__ == "__main__":
     generate_dataset(150)
